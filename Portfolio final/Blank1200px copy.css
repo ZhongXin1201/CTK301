@@ -1,0 +1,274 @@
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow for the nav bar */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f4a300;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #333;
+  color: white;
+  padding: 100px 20px 0px 20px;
+  text-align: center;
+  height: 100vh;
+  position: relative; /* Allows absolute positioning of the image */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Stronger drop shadow */
+  transition: box-shadow 0.3s ease; /* Transition for the hero section */
+}
+
+.hero:hover {
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.hero h1 {
+  font-size: 3em;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.hero h1:hover {
+  transform: translateY(-10px); /* Subtle movement on hover */
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.hero .button {
+  padding: 15px 30px;
+  background-color: #f4a300;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .button:hover {
+  background-color: #e68a00;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Image positioned at the bottom of the page */
+.bottom-image {
+  display: block;
+  width: 15%; /* Adjust the percentage as needed to reduce the image size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the width proportionally */
+  position: relative;
+  bottom: 0;
+  margin-top: 300px; /* Adjust if needed to move the image closer or further from the Hero section */
+  margin-left: auto;  /* Center the image horizontally */
+  margin-right: auto; /* Center the image horizontally */
+}
+
+/* About Section */
+.about {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2em;
+}
+
+/* Portfolio Section */
+.AI {
+  text-align: center;
+}
+
+.portfolio {
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+}
+
+.portfolio h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Portfolio Items Wrapper */
+.portfolio-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+  width: 100%;               /* Make each item take up 48% of the width */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Audio and Image Container */
+.audio-image-container {
+  display: flex;              /* Use Flexbox to align the image and audio player side by side */
+  justify-content: flex-start; /* Align the content to the left */
+  align-items: center;        /* Vertically center the items */
+  gap: 20px;                  /* Space between the image and audio player */
+}
+
+/* Portfolio Image Styling */
+.portfolio-image {
+  width: 10%;                 /* Make the image take up 50% of the container width */
+  height: auto;
+  border-radius: 10px;        /* Round the corners of the image */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow around the image */
+  cursor: pointer;           /* Make the image look clickable */
+
+  /* Add Linear Gradient */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  padding: 20px;
+  border-radius: 10px;  
+}
+
+/* Audio Player Styling */
+audio {
+  width: 80%;                 /* Make the audio player take up 50% of the container width */
+  border-radius: 10px;        /* Round the corners of the audio player */
+  background-color: #f4f4f4;  /* Optional background color for the audio player */
+  padding: 10px;              /* Padding inside the audio player */
+}
+
+/* Optional: Hover effect for portfolio items */
+.portfolio-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%;               /* Stack the portfolio items vertically on small screens */
+  }
+
+  .portfolio-items {
+    flex-direction: column;    /* Stack the items vertically */
+  }
+
+  .audio-image-container {
+    flex-direction: column;    /* Stack the image and audio player vertically on small screens */
+    gap: 10px;                 /* Space between the image and audio player */
+  }
+
+  .portfolio-image, audio {
+    width: 100%;               /* Make the image and audio player take up full width on small screens */
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f4a300;
+}
+
+/* Fancybox */
+
+#myCarousel{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.first-div{
+  margin-top: 50px;
+}
+
+img{
+  width: 500px;
+  height: 100%;
+  padding: 10px;
+}
+
+a{
+  width: 500px;
+  height: 100%;
+}
+
+.first-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Custom linear easing functions */
+linear(0, 0.402 7.4%, 0.711 15.3%, 0.929 23.7%, 1.008 28.2%, 1.067 33%, 1.099 36.9%, 1.12 41%, 1.13 45.4%, 1.13 50.1%, 1.111 58.5%, 1.019 83.2%, 1.004 91.3%, 1)
