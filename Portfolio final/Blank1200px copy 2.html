@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Blank1200px copy 2.css">
+
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    
+    <!-- jQuery (required for Fancybox) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my work and projects.</p>
+            <a href="#portfolio" class="button">View Portfolio</a>
+        </div>
+
+        <!-- Image at the bottom of the Hero Section -->
+        <img src="Huh cat.png" alt="Hero Image" class="bottom-image">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>artist statment</p>
+    </section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <h2>My Work</h2>
+
+    <!-- Example Project 1 with Audio -->
+    <div class="portfolio-item">
+        <h3>Project Title</h3>
+        <p>Short description of the project or work.</p>
+
+        <!-- Audio Button to open Fancybox -->
+        <a href="#audio1" data-fancybox="audio-gallery" data-caption="Project Title Audio">
+            <button class="audio-button">Listen to Project Title</button>
+        </a>
+    </div>
+
+    <!-- Hidden Audio Content for Fancybox -->
+    <div style="display: none;">
+        <div id="audio1">
+            <!-- Audio player embedded for Fancybox -->
+            <audio controls>
+                <source src="sketches 1 copy.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <!-- Contact form goes here -->
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            
+            
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript goes here (before the closing body tag) -->
+    <script>
+        $(document).ready(function() {
+            // Initialize Fancybox for audio elements
+            $('[data-fancybox="audio-gallery"]').fancybox({
+                buttons: [
+                    'play',  // Include play button
+                    'close'  // Include close button
+                ],
+                loop: true, // Allow looping of audio
+                protect: true, // Prevent right-click on audio
+            });
+        });
+    </script>
+
+</body>
+</html>
