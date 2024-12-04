@@ -3,187 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zchou Design</title>
+    <title>Your Portfolio</title>
 
-    <!-- Link to Google Fonts for external font -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Link to Font Awesome for social media icons -->
+    <!-- Link to Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <style>
- /* Reset some default styles */
-   body, h1, p, ul, a {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-   }
-   body {
-     font-family: 'Roboto', sans-serif; /* Use Google Font */
-     background-color: #333; /* Dark background for the body */
-     color: #333;
-   }
-   /* Header section */
-   .header {
-     background-color: #f4a300; /* Orange color for the header */
-     padding: 20px;
-     text-align: center;
-     position: relative;
-     z-index: 2;
-   }
-   .header h1 {
-     font-size: 36px;
-     color: #fff;
-     font-weight: bold;
-   }
-   .header:before {
-     content: "";
-     position: absolute;
-     top: 0;
-     right: -100px;
-     width: 0;
-     height: 0;
-     border-top: 100px solid #f4a300;
-     border-left: 100px solid transparent;
-     z-index: -1;
-   }
-   /* Main content section */
-   .main-content {
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-start; /* Align to top */
-     padding: 50px;
-     background-color: #0d0909;
-     border-radius: 15px;
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-     gap: 30px;
-   }
-   .main-text {
-     flex: 1;
-     padding: 20px;
-     font-size: 16px;
-     line-height: 1.6;
-     color: #333;
-     background-color: #fff;
-     border-radius: 10px;
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-     max-width: 60%;
-     transition: all 0.3s ease; /* Add transition for hover effect */
-   }
-   .main-text:hover {
-     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Add a larger shadow on hover */
-   }
-   .main-text p {
-     margin-bottom: 15px; /* Space between paragraphs */
-   }
-   .main-image {
-     flex: 1;
-     padding-left: 20px;
-     text-align: center;
-     position: relative;
-     height: 100%;
-     border-radius: 10px;
-     overflow: hidden;
-   }
-   .main-image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 10px;
-   }
-   /* Button styles */
-   .buttons {
-     display: flex;
-     gap: 15px;
-     margin-top: 20px;
-   }
-   .button {
-     padding: 15px 30px;
-     background-color: #f4a300;
-     color: #fff;
-     font-size: 14px;
-     border-radius: 25px;
-     text-decoration: none;
-     text-align: center;
-     display: inline-block;
-     transition: background-color 0.3s ease; /* Smooth transition for hover */
-   }
-   .button:hover {
-     background-color: #e68a00;
-   }
-   .instagram-button {
-     background-color: transparent;
-     border: 2px solid #f4a300;
-   }
-   .instagram-button:hover {
-     background-color: #f4a300;
-   }
-   /* Social Media Icons */
-   .social-media {
-     display: flex;
-     gap: 20px;
-     justify-content: center;
-     padding: 20px;
-   }
-   .social-icon {
-     font-size: 30px;
-     color: #f4a300;
-     transition: color 0.3s ease; /* Add transition for color */
-   }
-   .social-icon:hover {
-     color: #333;
-   }
- </style>
+    <link rel="stylesheet" href="Blank1200px copy 2.css">
+
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    
+    <!-- jQuery (required for Fancybox) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Zchou</h1>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my work and projects.</p>
+            <a href="#portfolio" class="button">View Portfolio</a>
+        </div>
+
+        <!-- Image at the bottom of the Hero Section -->
+        <img src="Huh cat.png" alt="Hero Image" class="bottom-image">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>artist statment</p>
+    </section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <h2>My Work</h2>
+
+    <!-- Example Project 1 with Audio -->
+    <div class="portfolio-item">
+        <h3>Project Title</h3>
+        <p>Short description of the project or work.</p>
+
+        <!-- Audio Button to open Fancybox -->
+        <a href="#audio1" data-fancybox="audio-gallery" data-caption="Project Title Audio">
+            <button class="audio-button">Listen to Project Title</button>
+        </a>
     </div>
 
-    <!-- Main Content Section -->
-    <div class="main-content">
-   <!-- Text Section -->
-   <div class="main-text">
-       <p>Trifecta cream arabica eu americano café au lait whipped pumpkin spice eu that. Robusta, ut, robusta that strong, so, affogato half and half brewed galão. Robust, trifecta aroma extraction body cappuccino blue mountain whipped et plunger pot.</p>
-       <p>Java, extraction, coffee barista mazagran irish cortado. Eu grounds plunger pot caffeine, blue mountain skinny medium steamed caramelization. Filter mazagran, kopi-luwak grinder pumpkin spice milk mazagran cappuccino dark acerbic java.</p>
-
-       <!-- Buttons Section -->
-       <div class="buttons">
-           <a href="#" class="button instagram-button">Button to Page 2</a>
-           <a href="#" class="button instagram-button">Instagram</a>
-       </div>
-
-       <!-- Audio Player Section -->
-       <audio controls>
-           <source src="your-audio-file.mp3" type="audio/mp3">
-           Your browser does not support the audio element.
-       </audio>
-
-       <!-- Video Player Section -->
-       <video controls width="300">
-           <source src="your-video-file.mp4" type="video/mp4">
-           Your browser does not support the video element.
-       </video>
-   </div>
-
-   <!-- Image Section -->
-   <div class="main-image">
-       <img src="Huh.jpg" alt="Huh Cat">
-   </div>
+    <!-- Hidden Audio Content for Fancybox -->
+    <div style="display: none;">
+        <div id="audio1">
+            <!-- Audio player embedded for Fancybox -->
+            <audio controls>
+                <source src="sketches 1 copy.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </div>
 
-    <!-- Footer Section -->
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <!-- Contact form goes here -->
+        </form>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="social-media">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <div class="social-icons">
+            
+            
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
+    <!-- JavaScript goes here (before the closing body tag) -->
+    <script>
+        $(document).ready(function() {
+            // Initialize Fancybox for audio elements
+            $('[data-fancybox="audio-gallery"]').fancybox({
+                buttons: [
+                    'play',  // Include play button
+                    'close'  // Include close button
+                ],
+                loop: true, // Allow looping of audio
+                protect: true, // Prevent right-click on audio
+            });
+        });
+    </script>
+
 </body>
 </html>
-
-

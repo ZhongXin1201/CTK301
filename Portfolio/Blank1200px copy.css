@@ -118,27 +118,25 @@ header nav ul li a:hover {
 .portfolio h2 {
   font-size: 2em;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 200;
-  }
+/* Portfolio Items Wrapper (Flexbox Layout) */
+.portfolio-items {
+  display: flex;          /* Flexbox layout for the items */
+  justify-content: space-between; /* Add space between the items */
+  gap: 30px;              /* Add gap between items */
+  flex-wrap: wrap;        /* Allow wrapping of items on smaller screens */
+  margin: 0 auto;         /* Center the portfolio items */
 }
 
 /* Portfolio Item Styling */
 .portfolio-item {
-  margin-bottom: 30px;
+  width: 100%;             /* Each portfolio item takes 50% of the space minus gap */
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for scale and shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-item h3 {
@@ -153,11 +151,28 @@ header nav ul li a:hover {
 
 /* Style for the Audio Player */
 audio {
-  width: 50%;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: #f4f4f4;
-  padding: 10px;
+  width: 100%;           /* Make the audio player take up full width */
+  margin-top: 10px;      /* Space between text and audio player */
+  border-radius: 10px;   /* Round the corners of the audio player */
+  background-color: #f4f4f4; /* Optional background color */
+  padding: 10px;         /* Padding inside the audio player */
+}
+
+/* Optional: Hover effect for portfolio items */
+.portfolio-item:hover {
+  transform: translateY(-5px);  /* Subtle hover effect */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%;       /* Make items take up full width on smaller screens */
+  }
+
+  .portfolio-items {
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+  }
 }
 
 /* Contact Section */
@@ -189,4 +204,33 @@ footer {
 
 .social-icons a:hover {
   color: #f4a300;
+}
+
+/* Fancybox */
+
+#myCarousel{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.first-div{
+  margin-top: 50px;
+}
+
+img{
+  width: 500px;
+  height: 100%;
+  padding: 10px;
+}
+
+a{
+  width: 500px;
+  height: 100%;
+}
+
+.first-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }

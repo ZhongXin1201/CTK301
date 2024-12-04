@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Blank1200px copy.css">
+
+    <!-- Fancybox and Jquery CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <title>Your Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Link to Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="Blank1200px copy.css">
 </head>
 <body>
 
@@ -42,42 +43,81 @@
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>artist statment</p>
+        <p>Alan Chou – an independent artist with a name that’s as cool as it sounds, except when my “unique” pronunciation gets it mistaken for “Adam.” Born and raised in Taiwan, I’ve always had a passion for music production, even if mixing and mastering sometimes feel like my ears are running a never-ending marathon. But hey, the further I go, the better I get. Yes, I create my own music, too—<br>ear damage is all part of the process, right?
+
+            To keep sharpening my skills (or just to avoid my neighbors' complaints), I crossed the Pacific to the U.S., where I'm now pursuing my master's at Illinois State University’s CTK program.
+            
+            What inspires me? The smooth beat from Khalil Fong, the silky R&B vocals of David Tao, and Jacob Collier’s brain-bending compositions. It's like throwing the best musical party, and somehow, they all show up.
+            
+            I believe music has the power to turn even the dullest moments into a dance party (although I can’t dance at all).
+            
+            P.S.: Dad jokes are the best</p>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <h2>My Work</h2>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <h2>My Work</h2>
 
-         <!-- Example Project 1 with Audio -->
-    <div class="portfolio-item">
-        <h3>Project Title</h3>
-        <p>Short description of the project or work.</p>
+<!-- Fancybox -->
+    <div id="myCarousel" class="first-div">
+        <a data-fancybox="gallery" href="img/1.jpg"><img src="cat 1.jpg"></a>
+        <a data-fancybox="gallery" href="img/2.jpg"><img src="cat 2.jpg"></a>
+        <a data-fancybox="gallery" href="img/3.jpg"><img src="cat 3.jpg"></a>
+    </div>
+    <div id="myCarousel" class="first-div">
+        <a data-fancybox="gallery" href="img/4.jpg"><img src="cat 4.jpg"></a>
+        <a data-fancybox="gallery" href="img/5.jpg"><img src="cat 5.jpg"></a>
+        <a data-fancybox="gallery" href="img/6.jpg"><img src="cat 6.jpg"></a>
+    </div>
 
-        <!-- Audio Player -->
-        <audio controls>
-            <source src="sketches 1 copy.wav" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-        <!-- Add images or project descriptions -->
-    </section>
+    <!-- Portfolio Items Wrapper for Flexbox -->
+    <div class="portfolio-items">
+        <!-- Example Project 1 with Audio -->
+        <div class="portfolio-item">
+            <h3>Squencing</h3>
+            <p>Trying different sound variations + vocal synth</p>
+
+            <!-- Audio Player 1 -->
+            <audio controls>
+                <source src="sketches 1 copy.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Example Project 2 with Audio -->
+        <div class="portfolio-item">
+            <h3>Blinded</h3>
+            <p>R&B vibe E-Guitar</p>
+
+            <!-- Audio Player 2 -->
+            <audio controls>
+                <source src="Sketches 4 copy.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <form>
             <!-- Contact form goes here -->
+            zchou@ilstu.edu<br>
+            a0953212019@gmail.com
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/zhoung_xin/profilecard/?igsh=YTB5MHJzYW5zazFz" class="social-icon"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
+
+    <!-- Add JavaScript before closing the body tag -->
 
 </body>
 </html>
